@@ -1,0 +1,36 @@
+<%- include('../layouts/head.ejs') %>
+<link rel="stylesheet" href="/css/style.css">
+    <title>Wealth Bazzar | <%= title%> </title>
+  </head>
+
+    <body>
+        <%- include('../layouts/navbar.ejs') %>
+
+        <h1>Service List</h1>
+
+        <div class="container service-list">
+            <table class="table">
+                <thead>
+                  <tr>
+                    <th scope="col">#</th>
+                    <th scope="col">Title</th>
+                    <th scope="col">Description</th>
+                    <th scope="col">Action</th>
+                  </tr>
+                </thead>
+                <tbody>
+                    <% for(let service of services){ %> 
+                  <tr>
+                    <th scope="row"><%= services.findIndex(item => service._id === item._id) +1 %> </th>
+                    <td><%= service.title %> </td>
+                    <td><%= service.description.substring(0, 50) + '...' %> </td>
+                    <td><a class="btn btn-success" href="/admin/service/<%= service._id %> ">Edit</a> <a class="btn  btn-danger" href="/admin/delete-service/<%= service._id %>">Delete</a></td>
+                  </tr>
+                  <% } %> 
+               
+                </tbody>
+              </table>
+        </div>
+        
+        <%- include('../layouts/footer.ejs') %>
+        <% -include('../layouts/end.ejs') %>

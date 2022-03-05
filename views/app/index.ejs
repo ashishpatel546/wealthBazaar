@@ -1,0 +1,47 @@
+<%- include('../layouts/head.ejs') %>
+<link rel="stylesheet" href="/css/style.css">
+    <title>Wealth Bazzar | <%= title%> </title>
+  </head>
+
+    <body>
+        <%- include('../layouts/navbar.ejs') %>
+        
+
+        <div class="container-fluid header-section">
+
+            <div class="row">
+        
+                <div class="col-12 col-md-6 mt-5">
+                    <div class="container-fluid">
+                        <h1>Welcome to <br><span class="brand-name">Wealth Bazza₹</span></h1>
+                        <h3>The best platform to invest your money safely</h3>
+                        <p>We act as a catalyst in providing corporate finance advice and assistance in a wide variety of situations that include raising development and turnaround funding, MBOs/MBIs, mergers, acquisitions and disposals, including Business Setup, Offshore company formation with Visas Assistance, Residential & Commercial Real Estate Sales & Management. With our Professional touch we offer solutions that cater to financial needs of Corporates on the lead advisory role from initial discussions through to successful completion.</p>
+                        <div class="dflex-center">
+                            <% if(!isAuthenticated) { %> 
+                            <a href="/login" class="mybtn1">Sign in</a>
+                            <a href="/signup" class="mybtn2">Sign up</a><br>
+                            <% } %> 
+                            <a href="/contact-us" class="mybtn3">Have Any Query</a>
+                        </div>
+        
+        
+        
+                    </div>
+                </div>
+                <div class="col-12 col-md-6 ">
+                    <div class="container-fluid dflex-center">
+        
+                        <figure>
+                            <img class="img-fluid img-arrow" src="/images/invest.jpg" alt="header-img">
+                        </figure>
+        
+                    </div>
+                </div>
+        
+        
+            </div>
+        
+        </div>
+        <%- include('../layouts/footer.ejs') %>
+    <% -include('../layouts/end.ejs') %>
+

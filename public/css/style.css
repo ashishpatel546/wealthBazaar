@@ -1,0 +1,746 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Montserrat&family=Poiret+One&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+html {
+  font-size: 62.5%;
+  scroll-behavior: smooth;
+}
+
+body {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  height: 100vh;
+}
+
+.navbar-toggler {
+  background-color: #0e4f99;
+}
+
+.navbar-toggler-icon {
+  color: white;
+}
+
+.headings {
+  margin: 1.5rem;
+}
+
+input, textarea {
+  border-radius: 3rem !important;
+}
+
+h1 {
+  color: #0e4f99;
+  font-size: 4rem;
+  text-transform: capitalize;
+  text-align: center;
+  margin: 1rem 0.8rem;
+  padding: 0.5rem 1rem;
+  font-weight: bold;
+  font-family: 'Poiret One', cursive;
+}
+
+h3 {
+  color: rgba(240, 83, 56, 0.89);
+  font-size: 2.5rem;
+  text-transform: capitalize;
+  text-align: center;
+  margin: 1rem 0.8rem;
+  padding: 0.5rem 1rem;
+  font-weight: bold;
+  font-family: 'Poiret One', cursive;
+}
+
+h4 {
+  font-size: 1.7rem;
+  text-transform: capitalize;
+  color: #035e38;
+  font-weight: bold;
+  font-family: 'Poiret One', cursive;
+}
+
+p {
+  color: #0e4f99;
+  font-size: 1.5rem;
+  text-align: justify;
+  text-transform: capitalize;
+  margin: 0.5rem 1rem;
+  padding: 0.5rem;
+  font-weight: 700;
+}
+
+.mybtn1 {
+  text-decoration: none;
+  color: #0e4f99;
+  font-size: 1.5rem;
+  padding: 0.5rem 1rem;
+  margin: 2rem 1rem;
+  border: 2px solid #0e4f99;
+  border-radius: 3rem;
+  font-weight: bold;
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
+  text-transform: capitalize;
+}
+
+.mybtn1:hover {
+  color: #fff;
+  background-color: #0e4f99;
+}
+
+.mybtn2 {
+  text-decoration: none;
+  color: #035e38;
+  font-size: 1.5rem;
+  padding: 0.5rem 1rem;
+  margin: 2rem 1rem;
+  border: 2px solid #035e38;
+  border-radius: 3rem;
+  font-weight: bold;
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
+  text-transform: capitalize;
+}
+
+.mybtn2:hover {
+  color: #fff;
+  background-color: #035e38;
+}
+
+.mybtn3 {
+  margin: 1rem 1rem;
+  padding: 0.5rem 1rem;
+  font-size: 1.5rem;
+  text-transform: capitalize;
+  border: 0.2rem solid rgba(240, 83, 56, 0.89);
+  color: rgba(240, 83, 56, 0.89);
+  border-radius: 2rem;
+  background: transparent;
+  -webkit-transition: all 1s;
+  transition: all 1s;
+  font-family: 'Montserrat', sans-serif;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.mybtn3:hover {
+  background-color: rgba(240, 83, 56, 0.89);
+  color: white;
+  font-weight: bold !important;
+}
+
+.sub-button {
+  border: 2px solid #0e4f99;
+  border-radius: 3rem;
+  font-weight: bold;
+  color: #0e4f99;
+  font-size: 1.5rem;
+  -webkit-transition: all 0.8s;
+  transition: all 0.8s;
+  padding: 0.5rem 1rem;
+  text-decoration: none;
+}
+
+.sub-button:hover {
+  color: #fff;
+  background-color: #0e4f99;
+}
+
+.mybtn-sm-1 {
+  border: 2px solid #0e4f99;
+  border-radius: 3rem;
+  text-decoration: none;
+  font-weight: bold;
+  color: #0e4f99;
+  font-size: 1.5rem;
+  -webkit-transition: all 0.8s;
+  transition: all 0.8s;
+  padding: 0.2rem 0.5rem;
+  margin: 0 1rem;
+}
+
+.mybtn-sm-1:hover {
+  color: #fff;
+  background-color: #0e4f99;
+}
+
+.mybtn-sm-2 {
+  border: 2px solid #035e38;
+  border-radius: 3rem;
+  text-decoration: none;
+  font-weight: bold;
+  color: #035e38;
+  font-size: 1.5rem;
+  -webkit-transition: all 0.8s;
+  transition: all 0.8s;
+  padding: 0.2rem 0.5rem;
+  margin: 0 1rem;
+}
+
+.mybtn-sm-2:hover {
+  color: #fff;
+  background-color: #035e38;
+}
+
+.mybtn-sm-3 {
+  border: 2px solid rgba(240, 83, 56, 0.89);
+  border-radius: 3rem;
+  text-decoration: none;
+  font-weight: bold;
+  color: rgba(240, 83, 56, 0.89);
+  font-size: 1.5rem;
+  -webkit-transition: all 0.8s;
+  transition: all 0.8s;
+  padding: 0.2rem 0.5rem;
+  margin: 0 1rem;
+}
+
+.mybtn-sm-3:hover {
+  color: #fff;
+  background-color: rgba(240, 83, 56, 0.89);
+}
+
+.myalert_message {
+  font-weight: bold;
+  font-size: 1.5rem;
+}
+
+.mynavbar {
+  background-color: #fff;
+  border-radius: 3rem;
+  margin-left: -8px !important;
+  width: auto;
+}
+
+.sticky {
+  position: -webkit-sticky !important;
+  position: sticky !important;
+  top: 0;
+  width: 100%;
+  z-index: 99;
+}
+
+.mynav-brand {
+  font-size: 2rem;
+  color: #0e4f99 !important;
+  font-weight: bold;
+  margin-left: 10px;
+}
+
+.mylogo-img {
+  width: 5rem;
+  height: auto;
+  margin: 0px;
+  padding: 0%;
+}
+
+.nav-time {
+  font-size: 1.5rem;
+  list-style: none;
+  color: #0e4f99;
+  font-weight: 600;
+  margin-left: 10rem;
+  margin-right: 3rem;
+  padding: 0 1rem;
+}
+
+.nav-btn {
+  font-size: 1.8rem;
+  font-weight: 600;
+  margin: 0.5rem 1.2rem;
+  padding: 0.2rem 1.2rem;
+  border-radius: 3rem;
+  color: #0e4f99 !important;
+  -webkit-transition: all 0.8s;
+  transition: all 0.8s;
+}
+
+.nav-btn:hover {
+  color: #fff !important;
+  background-color: #0e4f99;
+}
+
+.header-section {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin: 2rem 0;
+  height: 100vh;
+}
+
+.brand-name {
+  text-transform: none;
+  font-size: 5rem;
+  font-weight: bold;
+  color: #035e38;
+  border: 1px solid #035e38;
+  border-radius: 4rem;
+  padding: 0rem 1.3rem;
+  margin: 1rem 0.5rem;
+  text-shadow: 1px 1px 3px #035e38;
+  font-family: 'Poiret One', cursive;
+}
+
+.dflex-center {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.img-arrow {
+  -webkit-clip-path: polygon(25% 0%, 100% 0%, 100% 100%, 25% 100%, 0% 50%);
+          clip-path: polygon(25% 0%, 100% 0%, 100% 100%, 25% 100%, 0% 50%);
+}
+
+.img-round50 {
+  border-radius: 50%;
+}
+
+.services-section {
+  background-color: #d6e4e4;
+  width: 100vw;
+  height: auto;
+  border-radius: 5rem;
+  margin-bottom: 0;
+}
+
+.mycard {
+  border: 3px solid #e4e7f0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  min-height: -webkit-fit-content;
+  min-height: -moz-fit-content;
+  min-height: fit-content;
+  min-height: 45rem;
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
+  border-radius: 4rem;
+  margin-bottom: 2rem;
+}
+
+.mycard:hover {
+  background-color: #fff;
+  -webkit-transform: translatey(-10.5px);
+          transform: translatey(-10.5px);
+  cursor: pointer;
+  -webkit-box-shadow: 6px 6px 5px 3px #035e38;
+          box-shadow: 6px 6px 5px 3px #035e38;
+}
+
+.mycard-img {
+  margin: 0px, 0px;
+  padding: 0px, 0px;
+  width: 90%;
+  height: auto;
+  border-radius: 4rem;
+}
+
+.mycard-title {
+  margin-top: 1.5rem;
+}
+
+.mycard-text {
+  margin-top: 0px;
+  padding: 0.2rem 1rem;
+}
+
+.about-section {
+  margin-top: -9px;
+  width: 100vw;
+  height: auto;
+  background: -webkit-gradient(linear, left top, right top, from(white), to(#dfebf7));
+  background: linear-gradient(to right, white, #dfebf7);
+  border-radius: 5rem;
+}
+
+.box {
+  border: 3px solid #fff;
+  border-radius: 4rem;
+  margin: 3rem;
+  cursor: pointer;
+  -webkit-transition: all 0.8s;
+  transition: all 0.8s;
+}
+
+.box:hover {
+  background-color: #fff;
+  -webkit-transform: translatey(-10.5px);
+          transform: translatey(-10.5px);
+  cursor: pointer;
+  -webkit-box-shadow: 6px 6px 5px 3px #0e4f99;
+          box-shadow: 6px 6px 5px 3px #0e4f99;
+}
+
+.contact-us {
+  width: 100vw;
+  height: auto;
+}
+
+.myicon {
+  color: #0e4f99;
+  font-size: 3rem;
+}
+
+.contact-data {
+  margin: 2rem;
+}
+
+.mycontact {
+  font-size: 1.7rem;
+  color: #000;
+  font-weight: 600;
+  padding: 1rem 2rem;
+}
+
+.whatsapplink {
+  font-size: 1.7rem;
+  text-decoration: none;
+  color: #2ea72e;
+}
+
+.whatsapp {
+  font-size: 2rem;
+  text-decoration: none;
+  color: #2ea72e;
+  margin-left: 2rem;
+  font-weight: bolder;
+  border: 2px solid #2ea72e;
+  border-radius: 3rem;
+  background-color: transparent;
+  padding: 0.5rem 1rem;
+  -webkit-transition: all 0.8s;
+  transition: all 0.8s;
+  -webkit-animation: blink 1.5s infinite;
+          animation: blink 1.5s infinite;
+}
+
+@-webkit-keyframes blink {
+  0% {
+    background-color: #2ea72e;
+    color: #fff;
+  }
+  50% {
+    background-color: #fff;
+    color: #035e38;
+  }
+  100% {
+    background-color: #2ea72e;
+    color: #fff;
+  }
+}
+
+@keyframes blink {
+  0% {
+    background-color: #2ea72e;
+    color: #fff;
+  }
+  50% {
+    background-color: #fff;
+    color: #035e38;
+  }
+  100% {
+    background-color: #2ea72e;
+    color: #fff;
+  }
+}
+
+.whatsapp:hover {
+  color: #fff;
+  background-color: #2ea72e;
+  -webkit-animation: none;
+          animation: none;
+}
+
+.whatsappIcon {
+  font-size: 3.5rem;
+  text-decoration: none;
+  color: #2ea72e;
+}
+
+.form-text, label {
+  font-size: 1.5rem !important;
+}
+
+.map {
+  border-radius: 4rem;
+  margin: 1rem 0.3rem;
+  margin-bottom: 0px;
+}
+
+footer {
+  margin-top: auto;
+  height: 7rem;
+  width: 100%;
+  border-radius: 3rem;
+}
+
+.myfooter {
+  line-height: 7rem;
+  background-color: #0e4f99;
+  margin: 0;
+  padding: 0;
+}
+
+.footer-icon {
+  margin: 0.5rem 0.5rem;
+  color: #fff;
+  padding: 0.5rem 0.5rem;
+  font-size: 3rem;
+  cursor: pointer;
+}
+
+.footer-link {
+  margin: 0.5rem 2rem;
+  color: #fff;
+  padding: 0.2rem 2rem;
+  font-size: 1.5rem;
+  text-decoration: none;
+  cursor: pointer;
+  -webkit-transition: all 0.6s;
+  transition: all 0.6s;
+}
+
+.footer-link:hover {
+  color: #000;
+  font-weight: bold;
+  -webkit-transform: scale(1.05);
+          transform: scale(1.05);
+}
+
+.footer-note {
+  color: #fff;
+  font-weight: lighter;
+}
+
+.list-all-ipo th {
+  font-size: 2rem;
+}
+
+.list-all-ipo tr {
+  font-size: 1.5rem;
+}
+
+.scriptDetails {
+  font-size: 1.5rem;
+}
+
+.buyingP {
+  color: #0e4f99 !important;
+  font-weight: 700;
+}
+
+.sellingP {
+  color: #035e38 !important;
+  font-weight: 700;
+}
+
+.ipoendmatter {
+  margin-bottom: 5rem !important;
+  margin-top: 5rem !important;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.aboutInsurance {
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  width: auto !important;
+  margin-top: 2rem;
+}
+
+.insurance-img {
+  max-width: 40%;
+  height: auto;
+}
+
+.ins_desc {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  font-size: 1.45rem;
+  max-width: 40%;
+}
+
+.ins_desc h3 {
+  text-decoration: underline;
+}
+
+.insuranceTypes {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  margin: 3rem 0rem;
+  background-color: aliceblue;
+}
+
+.ins_individual {
+  margin: 2rem 1rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-transition: all 1s;
+  transition: all 1s;
+  border: 4px solid #fff;
+  border-radius: 3rem;
+}
+
+.ins_individual:hover {
+  background-color: #fff;
+  -webkit-transform: translateY(-10px);
+          transform: translateY(-10px);
+  -webkit-box-shadow: 11px 1px 10px 6px #0e4f99;
+          box-shadow: 11px 1px 10px 6px #0e4f99;
+  border-radius: 3rem;
+}
+
+.ins_individual:nth-child(odd) .insurance-img {
+  -webkit-box-ordinal-group: 3;
+      -ms-flex-order: 2;
+          order: 2;
+}
+
+.ins_individual:nth-child(odd) .ins_desc {
+  -webkit-box-ordinal-group: 2;
+      -ms-flex-order: 1;
+          order: 1;
+}
+
+form label {
+  font-size: 1.8rem !important;
+  font-weight: bold;
+}
+
+form input {
+  font-size: 1.8rem !important;
+}
+
+.loginPage .signup {
+  padding-top: 50rem;
+}
+
+.pannel {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  margin-top: 3rem;
+  border: 5px solid #035e38;
+  width: 50%;
+  border-radius: 5rem;
+}
+
+.pannel a {
+  text-decoration: none;
+  font-size: 2rem;
+  color: rgba(240, 83, 56, 0.89);
+  font-weight: bold;
+}
+
+.service-list {
+  font-size: 1.8rem;
+}
+
+.dashboard {
+  background: -webkit-gradient(linear, left top, right top, from(white), to(#dfebf7));
+  background: linear-gradient(to right, white, #dfebf7);
+  border-radius: 3rem;
+}
+
+.dashboard h1 {
+  text-decoration: underline;
+}
+
+@media (max-width: 768px) {
+  html {
+    font-size: 45%;
+  }
+  .footer-link {
+    margin: 0.5rem 0.5rem;
+  }
+}
+/*# sourceMappingURL=style.css.map */

@@ -1,0 +1,34 @@
+<%- include('../layouts/head.ejs') %>
+<link rel="stylesheet" href="/css/style.css">
+    <title>Wealth Bazzar | <%= title%> </title>
+  </head>
+
+    <body>
+        <%- include('../layouts/navbar.ejs') %>
+        <% if (errorMessage){ %> 
+            <div class="alert alert-danger alert-dismissible fade show myalert_message" role="alert">
+              <strong>Error Occured</strong> <%= errorMessage %>
+              <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+            </div>
+            <% } %> 
+
+        <div class="container loginPage">
+            <h1>Password Reset</h1>
+        <div class="container mt-5", style="width: 50%;">
+            <form action="/reset-password", method="post">
+              <input type="hidden", name="_csrf" value="<%= csrfToken %>">
+                <div class="mb-3">
+                  <label for="Email" class="form-label">Email address</label>
+                  <input type="email" class="form-control" id="Email" name="email" aria-describedby="emailHelp">
+                  <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
+                </div>
+                <div class="mt-3 text-center">
+                    <button type="submit" class="sub-button text-center">Generate Reset Link</button>
+                </div>
+              </form>
+              <p>Already Have Password <a href="/login"> Click Here</a></p>
+        </div>
+        </div>
+    
+        <%- include('../layouts/footer.ejs') %>
+    <% -include('../layouts/end.ejs') %>

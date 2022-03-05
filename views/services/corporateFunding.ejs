@@ -1,0 +1,35 @@
+<%- include('../layouts/head.ejs') %>
+<link rel="stylesheet" href="/css/style.css">
+    <title>Wealth Bazzar | <%= title%> </title>
+  </head>
+
+    <body>
+        <%- include('../layouts/navbar.ejs') %>
+    <div class="container-fluid aboutInsurance">
+
+        <div class="row">
+    
+            <div class="col-12 col-md-6">
+              <div class="container">
+                <h3><%= service.title %> </h3>
+                <p>Based on Wealth Bazzar entire framework, Traction Science, our provided solutions de-risk in raising Development Capital, venture capital, Refinancing and Early-Stage funding by leveraging market insight and curated investor feedback to systematically build a compelling traction narrative that helps founders/promoters know when, how, and from whom to raise the capital. At Wealth Bazzar our experience is in all forms of fund-raising including Equity, Debt, Mezzanine and asset-based finance. We advise and assist management teams in formulating strategy and preparing business plans for presentation to funders. We identify potential funders, Investors, Single and Multi-Family Offices, distribution houses, manage negotiations and handholding the entire process from initial feasibility through to the successful legal completion. This includes:
+                  • Advising and guiding on the format, content and preparation of the business plan
+                  • Selecting suitable funders that would be best suited to the company, industry, market and value of money to be raised
+                  • Presenting, Arranging and attending meetings with the proposed funders 
+                  • Negotiating the best possible funding structure and packages</p>
+                </div>
+                <div class="text-center mt-3">
+                    <a class="mybtn1" href="/contact-us">Ask to Our Expert</a>
+                </div>
+            </div>
+    
+            <div class="col-12 col-md-6">
+              <figure>
+                <img src="/<%= (service.image_url).replace(/\\/g, "/") %>" class="img-round50 img-fluid" %}>
+              </figure>
+            </div>
+        </div>
+    
+    </div>
+    <%- include('../layouts/footer.ejs') %>
+    <% -include('../layouts/end.ejs') %>

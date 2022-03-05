@@ -1,0 +1,43 @@
+<%- include('../layouts/head.ejs') %>
+<link rel="stylesheet" href="/css/style.css">
+    <title>Wealth Bazzar | <%= title%> </title>
+  </head>
+
+    <body>
+        <%- include('../layouts/navbar.ejs') %>
+
+
+<div class="container-fluid services-section" id="services">
+  <div class="headings">
+      <h1>Our Services</h1>
+  </div>
+
+  <div class="container">
+
+
+      <div class="row g-5">
+          <% for(let service of services) { %> 
+          <div class="col-12 col-md-4 col-lg-3">
+
+              <div class="mycard">
+                  <div class="mycard-img">
+                      <img class="img-fluid img-arrow" src=" /<%= (service.image_url).replace(/\\/g, "/") %>  " alt="service-img">
+                  </div>
+                  <div class="mycard-title">
+                      <h4> <%= service.title %>  </h4>
+                  </div> 
+                  <div class="mycard-text">
+                      <p> <%= service.description.substring(0,100) %>  </p>
+                  </div>
+                  <div class="mycard-btn">
+                      <a class="mybtn1" href="/service/<%= service.name %> ">Know More...</a> 
+                  </div>
+              </div>
+          </div>
+
+          <% } %> 
+      </div>
+  </div>
+</div>
+        <%- include('../layouts/footer.ejs') %>
+        <% -include('../layouts/end.ejs') %>

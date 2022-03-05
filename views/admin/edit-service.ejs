@@ -1,0 +1,41 @@
+<%- include('../layouts/head.ejs') %>
+<link rel="stylesheet" href="/css/style.css">
+    <title>Wealth Bazzar | <%= title%> </title>
+  </head>
+
+    <body>
+        <%- include('../layouts/navbar.ejs') %>
+        <% if(errorMessage){ %>
+          <div class="alert alert-danger alert-dismissible fade show" role="alert">
+            <strong>Error Occured</strong> <%= errorMessage %>
+            <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+          </div>
+      <%  }%>
+
+        <div class="container">
+            <h1>Add a Service</h1>
+            <form action="/admin/update-service", method="post" enctype = "multipart/form-data">
+                <input type="hidden", name="_csrf" value="<%= csrfToken %>">
+                <input type="hidden", name="_id" value="<%= service._id %>">
+                  <div class="mb-3">
+                    <label for="title" class="form-label">Title</label>
+                    <input type="text" class="form-control" id="title" name="title" value="<%= service.title %> ">
+                  </div>
+                  <div class="mb-3">
+                    <label for="floatingTextarea">Description</label>
+                    <textarea class="form-control" name="description" placeholder="Description" id="floatingTextarea" ><%= service.description %> </textarea>
+                  </div>
+                  <div class="mb-3 form-check">
+                    <label for="image" class="form-label" >Image</label>
+                    <input type="file" class="form-control"  name="image" style="width: 35%;">
+                  </div>
+                  <div class="mt-3 text-center">
+                      <button type="submit" class="sub-button text-center">Update</button>
+                  </div>
+                </form>
+        </div>
+
+
+        
+        <%- include('../layouts/footer.ejs') %>
+        <% -include('../layouts/end.ejs') %>

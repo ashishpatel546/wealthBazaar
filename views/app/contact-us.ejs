@@ -1,0 +1,80 @@
+<%- include('../layouts/head.ejs') %>
+<link rel="stylesheet" href="/css/style.css">
+    <title>Wealth Bazzar | <%= title%> </title>
+  </head>
+
+    <body>
+        <%- include('../layouts/navbar.ejs') %>
+
+        <% if(validationErrors){ for(error of validationErrors ){ %>
+            <div class="alert alert-danger alert-dismissible fade show" role="alert">
+              <p><strong><%= error.msg %></strong> </p>
+              <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+            </div>
+        <% } }%>
+
+        <% if(message){ %> 
+            <div class="alert alert-danger alert-dismissible fade show" role="alert">
+                <p><strong><%= message %></strong> </p>
+                <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+              </div>
+        <% } %> 
+
+        <div class="container contact-us" id="contact-us">
+            <div class="headings">
+                <h1>Contact Us</h1>
+            </div>
+        
+            <div class="row">
+                <div class="col-12 col-md-6">
+                    <img class="img-fluid img-round50" src="/images/contactus.jpg" alt="contact-img">
+                    <div class="contact-data">
+                        <i class="bi bi-telephone-outbound-fill myicon"></i>
+                        <span class="mycontact">+91-9716160389</span><br>
+                        <i class="bi bi-envelope-open-fill myicon"></i>
+                        <span class="mycontact">contact@wealthbazzar.in</span><br>
+                        <a class='whatsapplink' href="https://api.whatsapp.com/send?phone=+917982866801" target="blank"> <i class="bi bi-whatsapp whatsappIcon"></i><span class ='whatsapp'>May I Help You ???</span></a>
+                      </div>
+                </div>
+        
+        
+        
+                <div class="col-12 col-md-6">
+                    <form action="/contact-us" method="post">
+                        <input type="hidden", name="_csrf" value="<%= csrfToken %>">
+                        <div class="mb-3">
+                            <label for="name" class="form-label form-text">Name</label>
+                            <input type="text" class="form-control" value="<%= oldInput.name %> " id="name" name="name" required>
+                        </div>
+        
+                        <div class="mb-3">
+                            <label for="Email" class="form-label form-text">Email address</label>
+                            <input type="email" class="form-control" id="Email" aria-describedby="emailHelp" value="<%= oldInput.email %> " name="email"
+                                required>
+                            <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
+                        </div>
+                        <div class=" mb-3">
+                            <label for="phone" class="form-label form-text">Phone Number</label>
+                            <input type="text" class="form-control" id="phone" value="<%= oldInput.phone %> " name="phone" required>
+                        </div>
+                        <div class=" mb-3">
+                            <label for="query_type" class="form-label form-text">Query for Products</label>
+                            <input type="text" class="form-control" value="<%= oldInput.query_type %> " id="query_type" placeholder="e.g. Mutual Fund, Loan etc" name="query_type" required>
+                        </div>
+                        <div class=" mb-3">
+                            <label for="floatingTextarea form-text">Query</label>
+                            <textarea class="form-control" placeholder="Leave a query here" id="floatingTextarea2"
+                                style="height: 100px" name="message" required><%= oldInput.message %> </textarea>
+                        </div>
+                        <button type="submit" class="btn sub-button mb-3 fw-bold">Submit Your Query</button>
+                    </form>
+                </div>
+            </div>
+           
+        </div>
+
+
+        <%- include('../layouts/footer.ejs') %>
+        <% -include('../layouts/end.ejs') %>
+    
+    

@@ -1,0 +1,31 @@
+<%- include('../layouts/head.ejs') %>
+<link rel="stylesheet" href="/css/style.css">
+    <title>Wealth Bazzar | <%= title%> </title>
+  </head>
+
+    <body>
+        <%- include('../layouts/navbar.ejs') %>
+    <div class="container-fluid aboutInsurance">
+
+        <div class="row">
+    
+            <div class="col-12 col-md-6">
+              <div class="container">
+                <h3><%= service.title %> </h3>
+                <p>Wealth Bazzar offers a comprehensive Residential and Commercial property (Including Hotels/Restaurants) investment services, assessing and satisfying the needs of our clients who range from Institutions/Property Companies to HNIs/UHNIs and overseas trusts. Our service includes all aspects of sales and acquisitions, advising and arranging finance by way of short or long-term borrowing. Wealth Bazzar advise on Full marketing and sales advice on disposals to maximise value, Estate Management post sales, Impartial guidance on acquisitions, Identifying acquisition opportunities, appraisals and expert advice.</p>
+                </div>
+                <div class="text-center mt-3">
+                    <a class="mybtn1" href="/contact-us">Ask to Our Expert</a>
+                </div>
+            </div>
+    
+            <div class="col-12 col-md-6">
+              <figure>
+                <img src="/<%= (service.image_url).replace(/\\/g, "/") %>" class="img-round50 img-fluid" %}>
+              </figure>
+            </div>
+        </div>
+    
+    </div>
+    <%- include('../layouts/footer.ejs') %>
+    <% -include('../layouts/end.ejs') %>

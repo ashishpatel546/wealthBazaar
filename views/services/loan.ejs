@@ -1,0 +1,35 @@
+<%- include('../layouts/head.ejs') %>
+<link rel="stylesheet" href="/css/style.css">
+    <title>Wealth Bazzar | <%= title%> </title>
+  </head>
+
+    <body>
+        <%- include('../layouts/navbar.ejs') %>
+    <div class="container-fluid aboutInsurance">
+
+        <div class="row">
+    
+            <div class="col-12 col-md-6">
+              <div class="container">
+                <h3><%= service.title %> </h3>
+                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Autem unde nam quae nihil explicabo nemo
+                  accusantium alias illo repudiandae aliquid quo fugiat magnam tempore excepturi rerum dicta necessitatibus,
+                  provident consequatur dolorum enim reprehenderit voluptatum laboriosam ab? Voluptates repudiandae, incidunt
+                  repellat labore corporis provident blanditiis suscipit explicabo iure pariatur laborum distinctio libero
+                  placeat deserunt vero, eius velit architecto est reiciendis ipsum?</p>
+                </div>
+                <div class="text-center mt-3">
+                    <a class="mybtn1" href="/contact-us">Ask to Our Expert</a>
+                </div>
+            </div>
+    
+            <div class="col-12 col-md-6">
+              <figure>
+                <img src="/<%= (service.image_url).replace(/\\/g, "/") %>" class="img-round50 img-fluid" %}>
+              </figure>
+            </div>
+        </div>
+    
+    </div>
+    <%- include('../layouts/footer.ejs') %>
+    <% -include('../layouts/end.ejs') %>

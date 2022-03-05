@@ -1,0 +1,97 @@
+<%- include('../layouts/head.ejs') %>
+<link rel="stylesheet" href="/css/style.css">
+    <title>Wealth Bazzar | <%= title%> </title>
+  </head>
+
+    <body>
+        <%- include('../layouts/navbar.ejs') %>
+    <div class="container-fluid aboutInsurance">
+
+        <div class="row">
+    
+            <div class="col-12 col-md-6">
+              <div class="container">
+                <h3><%= service.title %> </h3>
+                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Autem unde nam quae nihil explicabo nemo
+                  accusantium alias illo repudiandae aliquid quo fugiat magnam tempore excepturi rerum dicta necessitatibus,
+                  provident consequatur dolorum enim reprehenderit voluptatum laboriosam ab? Voluptates repudiandae, incidunt
+                  repellat labore corporis provident blanditiis suscipit explicabo iure pariatur laborum distinctio libero
+                  placeat deserunt vero, eius velit architecto est reiciendis ipsum?</p>
+                </div>
+                <div class="text-center mt-3">
+                    <a class="mybtn1" href="/contact-us">Ask to Our Expert</a>
+                </div>
+            </div>
+    
+            <div class="col-12 col-md-6">
+              <figure>
+                <img src="/<%= (service.image_url).replace(/\\/g, "/") %>" class="img-round50 img-fluid" %}>
+              </figure>
+            </div>
+        </div>
+    <div class="container">
+        <hr/>
+    </div>
+    </div>
+
+    <div class="container">
+        <div class="container">
+            <div class="ins_individual container">
+            
+                <div class='insurance-img'  style="order:1;"{% endif %}>
+                    <img class="img-fluid img-round50" src="/images/term-insurance.jpg" alt="ins-img">
+                </div>
+    
+                <div class="ins_desc" ;>
+                        <h3>Term Insurance</h3>
+                        <hr>
+                        <h4>WHAT IS TERM LIFE INSURANCE?</h4>
+                        <p>Term Insurance Is A Type Of Life Insurance That Provides Coverage For A Specific Period Of Time Or Years. This Type Of Life Insurance Provides Financial Protection To The Nominee In Case Of Any Unfortunate Event With The Policyholder During The Policy Term. Term Insurance Policies Provide High Life Cover At Lower Premiums. For E.G.: Premium For ₹ 1 Crore Term Insurance Cover Could Be As Low As ₹ 441* P.M. These Fixed Premiums Can Be Paid At Once Or At Regular Intervals For The Entire Policy Term Or For A Limited Period. Premium Amount Varies Basis The Type Of The Premium Payment Method Opted By The Buyer.</p>
+    
+                        <a class="mybtn3" href="/contact-us">ask to our expert</a>
+                </div>
+            </div>
+        </div>
+        <div class="container">
+            <div class="ins_individual container">
+            
+                <div class='insurance-img'  style="order:2;"{% endif %}>
+                    <img class="img-fluid img-round50" src="/images/health-insurance.jpg" alt="ins-img">
+                </div>
+    
+                <div class="ins_desc" ;>
+                        <h3>Term Insurance</h3>
+                        <hr>
+                        <h4>Get Rs 5 Lac Health Cover @ Rs 300/Month *
+                            Get Up To 15% Online Discount**</h4>
+                        <p>Restoration Benefit on Sum Insured
+                            No Room Rent Capping
+                            Pre-hospitalization and Post hospitalization cover
+                            10,000+ hospitals for cashless treatment
+                            Instant Policy Purchase; Immediate Receipt
+                            Full & Free end to end assistance on claims</p>
+    
+                        <a class="mybtn3" href="/contact-us">ask to our expert</a>
+                </div>
+            </div>
+        </div>
+        <div class="container">
+            <div class="ins_individual container">
+            
+                <div class='insurance-img'  style="order:2;"{% endif %}>
+                    <img class="img-fluid img-round50" src="/images/health-insurance.jpg" alt="ins-img">
+                </div>
+    
+                <div class="ins_desc" ;>
+                        <h3>Motor Insurance</h3>
+                        <hr>
+                        <h4>Exclusive Offers On Motor Insurance</h4>
+                        <p>Free Roadside Assistance + Cashless Claim Benefits. Get Instant Policy Online. Direct Settlement + Engine Protection Cover. Compare & Buy Car Insurance From Top Insurers. Best Price Guaranteed. 100% Online & Secure. Zero Dep Insurance Cover. No Claim Bonus.</p>
+    
+                        <a class="mybtn3" href="/contact-us">ask to our expert</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <%- include('../layouts/footer.ejs') %>
+    <% -include('../layouts/end.ejs') %>

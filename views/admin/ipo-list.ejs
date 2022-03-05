@@ -1,0 +1,41 @@
+<%- include('../layouts/head.ejs') %>
+<link rel="stylesheet" href="/css/style.css">
+    <title>Wealth Bazzar | <%= title%> </title>
+  </head>
+
+    <body>
+        <%- include('../layouts/navbar.ejs') %>
+
+        <h1>IPO List</h1>
+
+        <div class="container service-list">
+            <table class="table">
+                <thead>
+                  <tr>
+                    <th scope="col">#</th>
+                    <th scope="col">Script Name</th>
+                    <th scope="col">Buying Price</th>
+                    <th scope="col">Selling Price</th>
+                    <th scope="col">Description</th>
+                    <th scope="col">Actions</th>
+                  </tr>
+                </thead>
+                <tbody>
+                    <% for(let ipo of IPOs){ %> 
+                  <tr>
+                    <th scope="row"><%= +(IPOs.findIndex(item => ipo._id === item._id)) +1 %> </th>
+                    <td><%= ipo.script_name %> </td>
+                    <td>₹ <%= ipo.buying_price %> </td>
+                    <td>₹ <%= ipo.selling_price %> </td>
+                    <td><%= ipo.description.substring(0,50) + '...' %> </td>
+                    <td><a class="btn btn-success" href="/admin/ipo/<%= ipo._id %> ">Edit</a> <a class="btn  btn-danger" href="/admin/delete-ipo/<%= ipo._id %>">Delete</a></td>
+                  </tr>
+                  <% } %> 
+               
+                </tbody>
+              </table>
+              <a class="btn btn-lg btn-success" href="/admin/addIPO">Add IPO to List</a>
+        </div>
+        
+        <%- include('../layouts/footer.ejs') %>
+        <% -include('../layouts/end.ejs') %>
