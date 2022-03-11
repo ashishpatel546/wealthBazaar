@@ -65,6 +65,16 @@ exports.serveServicePage = async(req, res, next)=>{
         renderData.IPOs = ipo_list
         res.render('services/preIPO', renderData)
     }
+    else if(serviceName === 'investment'){
+        const ipo_list = await IPO.find()
+        renderData.IPOs = ipo_list
+        res.render('services/investment', renderData)
+    }
+    else if(serviceName === 'wbacademy'){
+        const ipo_list = await IPO.find()
+        renderData.IPOs = ipo_list
+        res.render('services/wbAcademy', renderData)
+    }
     else{
         const error = new Error('Not Found')
         return next(error)

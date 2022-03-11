@@ -19,7 +19,6 @@ const adminRoutes = require('./routes/adminRoute')
 const errorController = require('./controller/error');
 
 
-// const MONGODB_URI = `mongodb+srv://${process.env.MONGO_USERNAME}:${process.env.MONGO_PASSWORD}@wealthbazaar.lpe5n.mongodb.net/${process.env.MONGO_DEFAULT_DATABASE}?retryWrites=true&w=majority`
 // const MONGODB_URI = `${process.env.MONGODB_URI}`
 const MONGODB_URI = "mongodb+srv://adminashish:ZjC7j6EQn4Er7yTQ@wealthbazaar.lpe5n.mongodb.net/wealthbazaar?retryWrites=true&w=majority"
 const port = process.env.PORT || 3000
@@ -37,7 +36,7 @@ app.use(compression())
 const store = new MongoDbStore({
     uri: MONGODB_URI,
     collection: 'sessions',
-    expires: 15*60*1000   // 10min
+    expires: 12*60*60*1000   // 10min
 })
 
 const csrfProtection = csrf()

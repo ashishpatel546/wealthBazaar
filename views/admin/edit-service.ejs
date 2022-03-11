@@ -17,6 +17,7 @@
             <form action="/admin/update-service", method="post" enctype = "multipart/form-data">
                 <input type="hidden", name="_csrf" value="<%= csrfToken %>">
                 <input type="hidden", name="_id" value="<%= service._id %>">
+                <input type="hidden", name="name" value="<%= service.name %>">
                   <div class="mb-3">
                     <label for="title" class="form-label">Title</label>
                     <input type="text" class="form-control" id="title" name="title" value="<%= service.title %> ">
